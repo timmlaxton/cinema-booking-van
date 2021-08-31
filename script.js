@@ -9,6 +9,8 @@ let ticketPrice = +movieSelect.value;
 function updateSelectedCount() {
   const selectedSeats = document.querySelectorAll(".row .seat.selected");
 
+  const seatsIndex = [...selectedSeats].map((seat) => [...seats].indexOf(seat));
+
   const selectedSeatsCount = selectedSeats.length;
 
   count.innerText = selectedSeatsCount;
